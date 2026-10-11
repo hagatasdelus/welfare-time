@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "timezone": "JST",
   "facilities": [
     {
@@ -129,6 +129,20 @@
       "note": ""
     },
     {
+      "id": "kamukura",
+      "name": "どうとんぼり神座",
+      "location": "真理館1F",
+      "category": "食堂",
+      "url": "https://www.kyoto-su.ac.jp/campus/welfare/kamukura/kamukura.html",
+      "google_map": "",
+      "image_url": "",
+      "headline": "白菜たっぷり、最後の一滴までおいしいラーメン",
+      "start_time": "11:00",
+      "end_time": "17:00",
+      "business_hours": "平日 11:00~17:00",
+      "note": ""
+    },
+    {
       "id": "ascella",
       "name": "ブックセンター Ascella（アスケラ）",
       "location": "雄飛館1F",
@@ -227,11 +241,25 @@
       "note": ""
     },
     {
-      "id": "2ZSvWJ",
-      "name": "Xingfukitchen",
-      "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ",
+      "id": "ksuksu",
+      "name": "CAFE KSUKSU",
+      "location": "むすびわざ館1F",
+      "category": "食堂",
+      "url": "",
+      "google_map": "",
       "image_url": "",
-      "headline": "タルタル唐揚げ弁当",
+      "headline": "",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "business_hours": "平日 12:00~13:00",
+      "note": ""
+    },
+    {
+      "id": "Z7S1R",
+      "name": "もんきち",
+      "url": "https://schedule.mellow.jp/ss_web/shops/Z7S1R",
+      "image_url": "",
+      "headline": "デミグラスオムライス",
       "location": "大学内指定場所",
       "google_map": "",
       "category": "キッチンカー",
@@ -241,11 +269,11 @@
       "note": ""
     },
     {
-      "id": "JmS6yB",
-      "name": "inosen cafe",
-      "url": "https://schedule.mellow.jp/ss_web/shops/JmS6yB",
+      "id": "aASDGZ",
+      "name": "ホーのおうち",
+      "url": "https://schedule.mellow.jp/ss_web/shops/aASDGZ",
       "image_url": "",
-      "headline": "マルゲリータ",
+      "headline": "ホーのミートソースコロッケ丼",
       "location": "大学内指定場所",
       "google_map": "",
       "category": "キッチンカー",
