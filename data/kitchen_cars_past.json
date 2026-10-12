@@ -1166,6 +1166,17 @@
     "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ"
   },
   {
+    "id": "JmS6yB",
+    "name": "inosen cafe",
+    "location": "",
+    "date": "2026-10-12",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "マルゲリータ",
+    "url": "https://schedule.mellow.jp/ss_web/shops/JmS6yB"
+  },
+  {
     "id": "Z7S1R",
     "name": "もんきち",
     "location": "",
@@ -1241,6 +1252,17 @@
     "business_hours": "11:00〜17:00",
     "headline": "クロッフル",
     "url": "https://schedule.mellow.jp/ss_web/shops/vmSb9R"
+  },
+  {
+    "id": "2ZSvWJ",
+    "name": "Xingfukitchen",
+    "location": "",
+    "date": "2026-10-19",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "タルタル唐揚げ弁当",
+    "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ"
   },
   {
     "id": "pMSXgz",
@@ -1483,17 +1505,6 @@
     "business_hours": "11:00〜17:00",
     "headline": "お肉たっぷりタコライス",
     "url": "https://schedule.mellow.jp/ss_web/shops/dqSeXG"
-  },
-  {
-    "id": "JmS6yB",
-    "name": "inosen cafe",
-    "location": "",
-    "date": "2026-10-12",
-    "start_time": "11:00",
-    "end_time": "17:00",
-    "business_hours": "11:00〜17:00",
-    "headline": "マルゲリータ",
-    "url": "https://schedule.mellow.jp/ss_web/shops/JmS6yB"
   },
   {
     "id": "ldS6DO",
