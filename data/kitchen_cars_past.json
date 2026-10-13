@@ -1265,6 +1265,28 @@
     "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ"
   },
   {
+    "id": "Z7S1R",
+    "name": "もんきち",
+    "location": "",
+    "date": "2026-10-20",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "デミグラスオムライス",
+    "url": "https://schedule.mellow.jp/ss_web/shops/Z7S1R"
+  },
+  {
+    "id": "aASDGZ",
+    "name": "ホーのおうち",
+    "location": "",
+    "date": "2026-10-20",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "ホーのミートソースコロッケ丼",
+    "url": "https://schedule.mellow.jp/ss_web/shops/aASDGZ"
+  },
+  {
     "id": "pMSXgz",
     "name": "SKY KITCHEN",
     "location": "",
