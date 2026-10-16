@@ -549,6 +549,16 @@
       "location": "大学内指定場所",
       "google_map": "",
       "category": "キッチンカー"
+    },
+    {
+      "id": "7ASDmX",
+      "name": "ANGELKITCHEN",
+      "url": "https://schedule.mellow.jp/ss_web/shops/7ASDmX",
+      "image_url": "",
+      "headline": "イチゴバナナチョコホイップ",
+      "location": "大学内指定場所",
+      "google_map": "",
+      "category": "キッチンカー"
     }
   ]
 }
