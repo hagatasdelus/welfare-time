@@ -1382,8 +1382,30 @@
     "start_time": "11:00",
     "end_time": "17:00",
     "business_hours": "11:00〜17:00",
-    "headline": "タルタル唐揚げ弁当",
+    "headline": "タルタル唐揚げ",
     "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ"
+  },
+  {
+    "id": "Z7S1R",
+    "name": "もんきち",
+    "location": "",
+    "date": "2026-10-27",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "デミグラスオムライス",
+    "url": "https://schedule.mellow.jp/ss_web/shops/Z7S1R"
+  },
+  {
+    "id": "aASDGZ",
+    "name": "ホーのおうち",
+    "location": "",
+    "date": "2026-10-27",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "ホーのミートソースコロッケ丼",
+    "url": "https://schedule.mellow.jp/ss_web/shops/aASDGZ"
   },
   {
     "id": "dqSeq3",
@@ -1419,17 +1441,6 @@
     "url": "https://schedule.mellow.jp/ss_web/shops/Z7SXr3"
   },
   {
-    "id": "evSkPV",
-    "name": "こむくろキッチン",
-    "location": "",
-    "date": "2026-11-06",
-    "start_time": "11:00",
-    "end_time": "17:00",
-    "business_hours": "11:00〜17:00",
-    "headline": "レモネードソーダ",
-    "url": "https://schedule.mellow.jp/ss_web/shops/evSkPV"
-  },
-  {
     "id": "vmSoDg",
     "name": "なかむーん家",
     "location": "",
@@ -1459,7 +1470,7 @@
     "start_time": "11:00",
     "end_time": "17:00",
     "business_hours": "11:00〜17:00",
-    "headline": "タルタル唐揚げ弁当",
+    "headline": "タルタル唐揚げ",
     "url": "https://schedule.mellow.jp/ss_web/shops/2ZSvWJ"
   },
   {
@@ -1505,6 +1516,17 @@
     "business_hours": "11:00〜17:00",
     "headline": "クロッフル",
     "url": "https://schedule.mellow.jp/ss_web/shops/vmSb9R"
+  },
+  {
+    "id": "evSkPV",
+    "name": "こむくろキッチン",
+    "location": "",
+    "date": "2026-11-27",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "レモネードソーダ",
+    "url": "https://schedule.mellow.jp/ss_web/shops/evSkPV"
   },
   {
     "id": "V2Sbq5",
