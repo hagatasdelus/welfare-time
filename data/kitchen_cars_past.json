@@ -1320,6 +1320,17 @@
     "url": "https://schedule.mellow.jp/ss_web/shops/V2Sbq5"
   },
   {
+    "id": "WkSdar",
+    "name": "リトルフィート カフェ キョウト",
+    "location": "",
+    "date": "2026-10-21",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "リトルフィートの夏が来た!",
+    "url": "https://schedule.mellow.jp/ss_web/shops/WkSdar"
+  },
+  {
     "id": "EpSrJN",
     "name": "Lo Splendore",
     "location": "",
@@ -1406,6 +1417,17 @@
     "business_hours": "11:00〜17:00",
     "headline": "ホーのミートソースコロッケ丼",
     "url": "https://schedule.mellow.jp/ss_web/shops/aASDGZ"
+  },
+  {
+    "id": "V2Sbq5",
+    "name": "kaka男cafe",
+    "location": "",
+    "date": "2026-10-28",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "クレープ各種",
+    "url": "https://schedule.mellow.jp/ss_web/shops/V2Sbq5"
   },
   {
     "id": "dqSeq3",
@@ -1637,17 +1659,6 @@
     "business_hours": "11:00〜17:00",
     "headline": "お肉たっぷりタコライス",
     "url": "https://schedule.mellow.jp/ss_web/shops/dqSeXG"
-  },
-  {
-    "id": "WkSdar",
-    "name": "リトルフィート カフェ キョウト",
-    "location": "",
-    "date": "2026-10-21",
-    "start_time": "11:00",
-    "end_time": "17:00",
-    "business_hours": "11:00〜17:00",
-    "headline": "リトルフィートの夏が来た!",
-    "url": "https://schedule.mellow.jp/ss_web/shops/WkSdar"
   },
   {
     "id": "RoSVpz",
