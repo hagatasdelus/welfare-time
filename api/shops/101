@@ -546,6 +546,125 @@
       "start_time": "11:00",
       "end_time": "14:00",
       "note": ""
+    },
+    {
+      "date": "2026-11-05",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-06",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-09",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-10",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-11",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-12",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-13",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-16",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-17",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-18",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-19",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-20",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-24",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-25",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-26",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-27",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
+    },
+    {
+      "date": "2026-11-30",
+      "location": "10号館1F",
+      "start_time": "11:00",
+      "end_time": "14:00",
+      "note": ""
     }
   ]
 }
