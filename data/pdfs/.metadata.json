@@ -34,5 +34,11 @@
     "etag": "\"c168-65cd340069029\"",
     "url": "https://www.kyoto-su.ac.jp/campuslife/welfare/pdf/october.pdf",
     "fetched_at": "2026-10-04T07:54:20.524518+09:00"
+  },
+  "2026_11.pdf": {
+    "last-modified": "Thu, 22 Oct 2026 01:43:59 GMT",
+    "etag": "\"c47e-65e63ff582bd2\"",
+    "url": "https://www.kyoto-su.ac.jp/campuslife/welfare/pdf/november.pdf",
+    "fetched_at": "2026-10-23T07:06:32.246500+09:00"
   }
 }
