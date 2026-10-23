@@ -74,6 +74,26 @@ just serve
 
 `just serve` は Hugo の開発サーバーを起動します（<http://localhost:1313/welfare-time/>）。
 
+### コンテナでの確認
+
+Python や Hugo を手元に入れずに、コンテナでサイトを確認することもできます。docker か podman が必要です。
+
+```bash
+just start
+```
+
+`just start` は [Containerfile](Containerfile) からイメージを作り、コンテナを起動します。コンテナの中で API と CSS を生成してから Hugo の開発サーバーが起動するので、少し待ってから <http://localhost:1313/welfare-time/> を開いてください。進み具合は `docker logs -f welfare-time` で確認できます。止めるときは `just stop` を実行します。
+
+podman を使うときは、`just CONTAINER=podman start` のように指定します。
+
+コンテナでは、次の点に注意してください。
+
+- リポジトリをコンテナにマウントして使います。手元でテンプレートや Markdown を編集すると、ブラウザの表示が自動で更新されます。
+- データは、リポジトリにある食堂のPDFとキッチンカーのアーカイブから生成します。大学サイトやキッチンカーのページからの取得は行わないので、`git pull` した時点の最新のデータになります。
+- 生成物は手元の `static/` と `data/` に書き出されます（どれも `.gitignore` の対象です）。
+- Tailwind CSS は起動時に1回だけビルドします。新しいクラスを使ったときは、`just stop` と `just start` で起動し直してください。
+- ポートは 1313 に固定しています。`just serve` と同時には使えません。
+
 ### テスト
 
 ```bash
