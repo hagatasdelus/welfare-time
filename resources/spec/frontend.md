@@ -90,6 +90,7 @@
   - `extra_form.js`：ヘルプの「臨時店舗の JSON を作る」フォーム。入力の検証、JSON の生成、表示例の描画を行います。カードの組み立ては `main.js` の `buildCardHtml()` を使い、サイトの表示と同じにします。
   - `modal.js`：モーダルの開閉。開くボタンに `data-modal-open="モーダルのid"`、閉じるボタンに `data-modal-close` を付けます。
 - **PC とスマートフォンで2組あるボタンは、ID ではなく `data-action` で探します。** 前日・今日・翌日・再読み込みのボタンは、ヘッダー（日付ナビ）と操作バーに1組ずつあります。`data-action="prev-day"`・`"today"`・`"next-day"`・`"reload"` を付け、`main.js` は `querySelectorAll` で両方にイベントを設定します。
+- **自前の CSS と JavaScript は、中身のハッシュ値を付けて読み込みます。** `baseof.html` では `{{ partial "asset_url.html" "js/main.js" }}` のように書き、`main.js?v=1328f551` の形の URL にします。中身が変わると URL が変わるので、公開の直後に「新しい HTML と、ブラウザのキャッシュに残った古い JavaScript」の組み合わせで動かなくなることを防げます。ファイルを追加したときも、この部分テンプレートを通します。
 - **パスは `window.BASE_PATH` から作ります。** サブパス（`/welfare-time/`）で配信しているため、リソースやAPIのパスはすべて `BASE_PATH` を前置します。`BASE_PATH` は `baseof.html` が `relURL` で求めて渡します。
 - **データで動かします。** 建物の座標などはマスター（`assets/facilities.json`）を非同期に読み込み、JavaScript にハードコードしません。
 - **イベントは委譲します。** カードや建物の範囲ごとに `onmouseenter` などを設定しません。`document` で `mouseover` を一度だけ受け、カーソルの下のカードや建物が変わったかで判定します（`delegateHover()`）。`mouseout` には頼りません。描き直しで取り除かれた要素の `mouseout` は届かないためです。

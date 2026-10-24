@@ -1,0 +1,15 @@
+{{- /*
+  static/ にある自前の CSS と JavaScript の URL に、中身のハッシュ値を付けて返す。
+  引数は static/ からのパス（例："js/main.js"）。
+
+  中身が変わると URL が変わるので、ブラウザは新しいファイルを取りに行く。
+  公開の直後に「新しい HTML と、キャッシュに残った古い JavaScript」の組み合わせで動かなくなるのを防ぐ。
+  中身が変わらなければ同じ URL のままなので、キャッシュはそのまま効く。
+  ファイルがないとき（開発中に just css を実行していないときなど）は、ハッシュ値を付けずに返す。
+*/ -}}
+{{- $url := . | relURL -}}
+{{- $file := printf "static/%s" . -}}
+{{- if fileExists $file -}}
+  {{- $url = printf "%s?v=%s" $url (substr (os.ReadFile $file | md5) 0 8) -}}
+{{- end -}}
+{{- return $url -}}
