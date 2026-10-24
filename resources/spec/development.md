@@ -43,6 +43,7 @@ just PYTHON=/path/to/venv/bin/python test
 | `daily_update.yml` | 毎日 UTC 22時（JST 7時）と手動 | データの取得、API とサイトの生成、アーカイブの main へのコミット、gh-pages へのデプロイ |
 | `test.yml` | PR と main への push | `just test` |
 | `copilot-setup-steps.yml` | このファイルの変更時と手動 | Copilot coding agent の作業環境の構築 |
+| `release_tag.yml` | `package.json` を変更した main への push と手動 | `package.json` のバージョンのタグ（`v0.4.2` など）がなければ、そのコミットに打つ |
 
 - `copilot-setup-steps.yml` のジョブ名は `copilot-setup-steps` でなければなりません。Copilot は main にあるこのファイルを使うため、変更は main にマージしてから有効になります。
 - マスターに未登録の店舗があっても、毎朝の更新は失敗させず、警告だけを出します（[data.md](data.md) の「異常時の扱い」）。
@@ -56,5 +57,7 @@ just PYTHON=/path/to/venv/bin/python test
 リリースするときは次の手順で行います。
 
 1. `CHANGELOG.md` に新しいバージョンの変更点を追記します。
-2. `package.json` の `version` を上げます。
-3. main にマージしたあと、`v0.4.0` のようにタグを打ちます。タグは、そのリリースの PR のマージのコミットに打ちます。フッタは、`data/` 以外を最後に変更したコミットにタグがあれば `v0.4.0`、なければ `v0.4.0+2335122` のようにハッシュ値を付けて表示するためです。
+2. `package.json` の `version` を上げます。`npm version patch --no-git-tag-version`（マイナーなら `minor`）を使うと、`package-lock.json` のバージョンも一緒に上がります。
+3. PR を作り、main にマージします。
+
+タグは手で打ちません。マージすると `release_tag.yml` が、そのマージのコミットに `v0.4.2` のような注釈付きタグを打ちます。フッタは、`data/` 以外を最後に変更したコミットにタグがあれば `v0.4.2`、なければ `v0.4.2+2335122` のようにハッシュ値を付けて表示するので、タグはマージのコミットに付いている必要があります。タグが打たれなかったときは、Actions の画面から `release_tag.yml` を手で実行します。

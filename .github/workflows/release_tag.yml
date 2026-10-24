@@ -1,0 +1,47 @@
+name: リリースのタグを打つ
+
+# package.json のバージョンに対応するタグ（v0.4.2 など）がまだなければ、main のそのコミットに打つ。
+# リリースの PR（package.json のバージョンを上げる PR）をマージすると、そのマージのコミットにタグが付く。
+# フッタは、コードを最後に変更したコミットにタグがあるかで、v0.4.2 と v0.4.2+ハッシュ値を出し分ける。
+
+on:
+  push:
+    branches:
+      - main
+    # バージョンは package.json だけで管理するので、package.json が変わったときだけ動かす。
+    # 毎朝の更新（data/ だけのコミット）では起動しない。
+    paths:
+      - package.json
+  # 打ち損ねたときに、Actions の画面から手で実行できるようにする
+  workflow_dispatch: {}
+
+concurrency:
+  group: welfare-time-release-tag
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: リポジトリをチェックアウトする
+        uses: actions/checkout@v6
+        with:
+          # 既存のタグを調べるため、タグも含めて取得する
+          fetch-depth: 0
+
+      - name: package.json のバージョンのタグを打つ
+        run: |
+          tag="v$(jq -r .version package.json)"
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            echo "${tag} は既にあるので、何もしない"
+            exit 0
+          fi
+
+          # これまでのタグと同じく、メッセージがタグ名の注釈付きタグにする
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "${tag}" -m "${tag}" "${GITHUB_SHA}"
+          git push origin "refs/tags/${tag}"
+          echo "${tag} を ${GITHUB_SHA} に打った"
