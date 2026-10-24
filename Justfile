@@ -22,6 +22,11 @@ CONTAINER_NAME := "welfare-time"
 # 毎朝の自動更新は data/ だけをコミットするので、データの更新では変わらない。
 CODE_UPDATED := `TZ=Asia/Tokyo git log -1 --first-parent --date=format-local:'%Y-%m-%d %H:%M' --format=%cd -- . ':!data' 2>/dev/null || true`
 
+# フッタのバージョンの後ろに付けるビルドメタデータ（例：v0.4.1+2335122）。上と同じコミットの短いハッシュ値。
+# package.json のバージョンは手で上げるので、リリースのあとにマージしたコードの変更は、これで区別する。
+# そのコミットにリリースのタグ（v*）が付いているとき、または .git がないとき（コンテナなど）は空にする。
+CODE_BUILD := `c=$(git log -1 --first-parent --format=%H -- . ':!data' 2>/dev/null) && [ -n "$c" ] && ! git describe --tags --exact-match --match 'v*' "$c" >/dev/null 2>&1 && git rev-parse --short=7 "$c" || true`
+
 # CSS をビルドし、APIを生成する
 all: css generate
 
@@ -103,11 +108,11 @@ css:
 
 # Tailwind CSS と Hugo でサイトを生成する
 build_html: css
-    HUGO_PARAMS_CODEUPDATED='{{ CODE_UPDATED }}' hugo --minify
+    HUGO_PARAMS_CODEUPDATED='{{ CODE_UPDATED }}' HUGO_PARAMS_CODEBUILD='{{ CODE_BUILD }}' hugo --minify
 
 # Hugo の開発サーバーを起動する（http://localhost:1313/welfare-time/）
 serve:
-    HUGO_PARAMS_CODEUPDATED='{{ CODE_UPDATED }}' hugo server
+    HUGO_PARAMS_CODEUPDATED='{{ CODE_UPDATED }}' HUGO_PARAMS_CODEBUILD='{{ CODE_BUILD }}' hugo server
 
 # 4. Container
 # リポジトリをマウントし、コンテナの中で生成して hugo server を起動する（Containerfile を参照）。
