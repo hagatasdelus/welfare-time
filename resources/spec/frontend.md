@@ -4,7 +4,7 @@
 
 | 項目 | 使うもの |
 | :--- | :--- |
-| サイト生成 | Hugo（CI では 0.119.0 extended） |
+| サイト生成 | Hugo（CI では 0.168.0 extended） |
 | CSS | Tailwind CSS v4。`assets/css/main.css` に設定を書き、Tailwind CLI でビルド時に `static/css/compiled.css` へコンパイルします。CDN は使いません。 |
 | JavaScript | フレームワークを使わない素の JavaScript（ES6 以降） |
 | 日付の選択 | Flatpickr |

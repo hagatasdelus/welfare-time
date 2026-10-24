@@ -7,7 +7,7 @@
 | ツール | 用途 |
 | :--- | :--- |
 | Python 3.11 | データの取得、解析、API の生成 |
-| Hugo 0.119.0（extended） | サイトの生成。`just generate` がベースURLの取得にも使います。 |
+| Hugo 0.168.0（extended） | サイトの生成。`just generate` がベースURLの取得にも使います。 |
 | Node 26 | Tailwind CSS のビルド |
 | [just](https://github.com/casey/just) | タスクの実行 |
 
