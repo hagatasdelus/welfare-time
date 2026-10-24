@@ -80,17 +80,17 @@ async function fetchData() {
     const prev = new Date(current); prev.setDate(prev.getDate() - 1);
     const next = new Date(current); next.setDate(next.getDate() + 1);
     
-    const prevBtn = document.getElementById('prev-day');
-    if (prevBtn) prevBtn.onclick = () => window.location.search = "date=" + prev.toLocaleDateString('sv-SE');
-    
-    const nextBtn = document.getElementById('next-day');
-    if (nextBtn) nextBtn.onclick = () => window.location.search = "date=" + next.toLocaleDateString('sv-SE');
-    
-    const todayBtn = document.getElementById('today-btn');
-    if (todayBtn) {
-        todayBtn.onclick = () => window.location.search = '';
-        todayBtn.disabled = (targetDateStr === new Date().toLocaleDateString('sv-SE'));
-    }
+    // 日付の移動のボタンは、PC の日付ナビとスマートフォンの操作バーに1組ずつあるので、両方に設定する
+    document.querySelectorAll('[data-action="prev-day"]').forEach(btn => {
+        btn.onclick = () => window.location.search = "date=" + prev.toLocaleDateString('sv-SE');
+    });
+    document.querySelectorAll('[data-action="next-day"]').forEach(btn => {
+        btn.onclick = () => window.location.search = "date=" + next.toLocaleDateString('sv-SE');
+    });
+    document.querySelectorAll('[data-action="today"]').forEach(btn => {
+        btn.onclick = () => window.location.search = '';
+        btn.disabled = (targetDateStr === new Date().toLocaleDateString('sv-SE'));
+    });
 
     try {
         const [scheduleRes, statusRes, masterRes] = await Promise.all([
@@ -316,7 +316,8 @@ if (themeBtn) {
 }
 
 // --- Reload Button ---
-document.getElementById('btn-reload')?.addEventListener('click', reloadPage);
+// ヘッダーとスマートフォンの操作バーに1つずつある
+document.querySelectorAll('[data-action="reload"]').forEach(btn => btn.addEventListener('click', reloadPage));
 
 // --- Map Logic ---
 const IMAGE_WIDTH = 1019, IMAGE_HEIGHT = 747;
