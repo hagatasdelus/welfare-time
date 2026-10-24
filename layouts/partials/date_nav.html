@@ -25,9 +25,15 @@
         </div>
 
         <!-- Info Area (Right) -->
-        <div class="text-right flex flex-col items-end gap-1">
-            <div id="header-data-range" class="text-[10px] md:text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded"></div>
-            <div id="status-info" class="text-[10px] text-slate-400 dark:text-slate-500 italic"></div>
+        <!-- 情報（取得元）のボタンは、データについての説明として提供範囲と最終更新の隣に置く -->
+        <div class="flex items-center justify-end gap-2">
+            <div class="text-right flex flex-col items-end gap-1">
+                <div id="header-data-range" class="text-[10px] md:text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded"></div>
+                <div id="status-info" class="text-[10px] text-slate-400 dark:text-slate-500 italic"></div>
+            </div>
+            <button type="button" data-modal-open="statusModal" class="p-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all text-slate-600 dark:text-slate-400 hover:text-ksu dark:hover:text-blue-400 shrink-0" title="情報（取得元）" aria-label="情報（取得元）">
+                <i class="bi bi-info-circle"></i>
+            </button>
         </div>
     </div>
 </div>
