@@ -1,6 +1,8 @@
 baseURL = 'https://tamadalab.github.io/welfare-time/'
 locale = 'ja'
 title = 'Welfare TIME'
+# タグやカテゴリは使わないので、その一覧ページを作らない（テンプレートがないという警告も出なくなる）
+disableKinds = ['taxonomy', 'term']
 
 [params]
   brand_icon = "assets/icon.svg"
