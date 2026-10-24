@@ -1,0 +1,39 @@
+{{/*
+  スマートフォンの幅のときだけ画面の下に固定する操作バー（#122）。
+  PC の幅では、同じボタンをヘッダー（navbar.html）と日付ナビ（date_nav.html）に出す。
+  ヘッダーには backdrop-filter があり、その中では position: fixed が画面ではなくヘッダーを基準にするため、
+  操作バーはヘッダーの外（baseof.html の actionbar ブロック）に置く。
+  ボタンは data-action と data-modal-open で動くので、ヘッダー側と2組あっても main.js と modal.js がどちらも扱う。
+*/}}
+<!-- 操作バーの裏にフッタが隠れないよう、バーと iPhone のホームバーの高さ分の余白をページの最後に取る -->
+<div class="md:hidden h-[calc(3.5rem+env(safe-area-inset-bottom))]" aria-hidden="true"></div>
+
+<nav class="md:hidden fixed inset-x-0 bottom-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 pb-[env(safe-area-inset-bottom)]" aria-label="操作">
+    <div class="h-14 px-3 flex items-center justify-between gap-2">
+        <!-- 日付の移動 -->
+        <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-lg shadow-inner">
+            <button type="button" data-action="prev-day" class="h-10 px-2.5 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all text-xs font-bold text-slate-600 dark:text-slate-300">
+                <i class="bi bi-chevron-left"></i> 前日
+            </button>
+            <button type="button" data-action="today" class="h-10 px-3 bg-ksu text-white rounded-md shadow-md text-xs font-black mx-1 transition-transform active:scale-95 disabled:opacity-50 disabled:scale-100">
+                今日
+            </button>
+            <button type="button" data-action="next-day" class="h-10 px-2.5 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all text-xs font-bold text-slate-600 dark:text-slate-300">
+                翌日 <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- 表示の操作 -->
+        <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-1">
+            <button type="button" data-action="reload" class="w-10 h-10 hover:bg-white dark:hover:bg-slate-700 rounded-full transition-all text-slate-600 dark:text-slate-400" title="更新" aria-label="更新">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+            <button type="button" data-modal-open="filterModal" class="w-10 h-10 hover:bg-white dark:hover:bg-slate-700 rounded-full transition-all text-slate-600 dark:text-slate-400" title="表示フィルタ" aria-label="表示フィルタ">
+                <i class="bi bi-funnel"></i>
+            </button>
+            <button type="button" data-modal-open="sortModal" class="w-10 h-10 hover:bg-white dark:hover:bg-slate-700 rounded-full transition-all text-slate-600 dark:text-slate-400" title="並び替え" aria-label="並び替え">
+                <i class="bi bi-sort-down"></i>
+            </button>
+        </div>
+    </div>
+</nav>
