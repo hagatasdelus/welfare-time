@@ -23,7 +23,7 @@
 # Debian bookworm の python3 は 3.11 で、ワークフローと同じになる。
 FROM node:26-bookworm-slim
 
-ARG HUGO_VERSION=0.119.0
+ARG HUGO_VERSION=0.168.0
 ARG JUST_VERSION=1.40.0
 ARG TARGETARCH
 

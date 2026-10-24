@@ -51,7 +51,7 @@
 以下が必要です。バージョンは [ワークフロー](.github/workflows/daily_update.yml) で使用しているものです。
 
 - Python 3.11
-- Hugo 0.119.0（extended）— サイト生成に加え、`just generate` がベースURLの取得に使います
+- Hugo 0.168.0（extended）— サイト生成に加え、`just generate` がベースURLの取得に使います
 - Node 26 — Tailwind CSS のビルドに使います
 - [just](https://github.com/casey/just) — タスクの実行に使います（`brew install just` などで入れてください）
 
