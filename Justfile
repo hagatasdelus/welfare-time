@@ -13,6 +13,11 @@ DEST_DIR := "static"
 PDFS_DEST_DIR := DEST_DIR / "daily"
 FACILITIES_JSON := SCRIPTS_DIR / "facilities.json"
 
+# コンテナで起動するときの設定。podman を使うときは just CONTAINER=podman start とする。
+CONTAINER := "docker"
+CONTAINER_IMAGE := "welfare-time"
+CONTAINER_NAME := "welfare-time"
+
 # フッタに表示するコードの最終更新日時（JST）。main 上で data/ 以外を変更した最後のコミットの時刻。
 # 毎朝の自動更新は data/ だけをコミットするので、データの更新では変わらない。
 CODE_UPDATED := `TZ=Asia/Tokyo git log -1 --first-parent --date=format-local:'%Y-%m-%d %H:%M' --format=%cd -- . ':!data' 2>/dev/null || true`
@@ -103,6 +108,22 @@ build_html: css
 # Hugo の開発サーバーを起動する（http://localhost:1313/welfare-time/）
 serve:
     HUGO_PARAMS_CODEUPDATED='{{ CODE_UPDATED }}' hugo server
+
+# 4. Container
+# リポジトリをマウントし、コンテナの中で生成して hugo server を起動する（Containerfile を参照）。
+# ポートは 1313 に固定する。Hugo のライブリロードがこのポートにつなぐため。
+
+# コンテナのイメージを作り、サイトを起動する（http://localhost:1313/welfare-time/）
+start:
+    {{ CONTAINER }} build -f Containerfile -t {{ CONTAINER_IMAGE }} .
+    {{ CONTAINER }} run -d --rm --name {{ CONTAINER_NAME }} -p 1313:1313 \
+        -v "{{ justfile_directory() }}":/app -v /app/node_modules {{ CONTAINER_IMAGE }}
+    @echo "起動しました。生成が終わると http://localhost:1313/welfare-time/ で開けます。"
+    @echo "進み具合は {{ CONTAINER }} logs -f {{ CONTAINER_NAME }} で確認し、止めるときは just stop を実行してください。"
+
+# start で起動したコンテナを止める（コンテナは削除され、イメージは残る）
+stop:
+    {{ CONTAINER }} stop {{ CONTAINER_NAME }}
 
 # Utilities
 
