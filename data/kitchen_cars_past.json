@@ -1705,6 +1705,17 @@
     "url": "https://schedule.mellow.jp/ss_web/shops/RoSVpz"
   },
   {
+    "id": "5gSVA6",
+    "name": "銀座六丁目、フライの家。京都店",
+    "location": "",
+    "date": "2026-11-06",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "チキンチーズカツライスバーガー",
+    "url": "https://schedule.mellow.jp/ss_web/shops/5gSVA6"
+  },
+  {
     "id": "7ASDmX",
     "name": "ANGELKITCHEN",
     "location": "",
@@ -1714,5 +1725,16 @@
     "business_hours": "11:00〜17:00",
     "headline": "イチゴバナナチョコホイップ",
     "url": "https://schedule.mellow.jp/ss_web/shops/7ASDmX"
+  },
+  {
+    "id": "5gSVA6",
+    "name": "銀座六丁目、フライの家。京都店",
+    "location": "",
+    "date": "2026-11-20",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "チキンチーズカツライスバーガー",
+    "url": "https://schedule.mellow.jp/ss_web/shops/5gSVA6"
   }
 ]
