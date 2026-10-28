@@ -1736,5 +1736,16 @@
     "business_hours": "11:00〜17:00",
     "headline": "チキンチーズカツライスバーガー",
     "url": "https://schedule.mellow.jp/ss_web/shops/5gSVA6"
+  },
+  {
+    "id": "NrSX7p",
+    "name": "媽媽菜館六花",
+    "location": "",
+    "date": "2026-11-25",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "business_hours": "11:00〜17:00",
+    "headline": "ユーリンチ丼（小、大）",
+    "url": "https://schedule.mellow.jp/ss_web/shops/NrSX7p"
   }
 ]
