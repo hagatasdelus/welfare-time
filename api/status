@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-10-28T07:05:19.875571+09:00",
+  "last_updated": "2026-10-29T07:05:04.589625+09:00",
   "timezone": "JST",
   "data_range": {
     "start": "2026-05-01",
     "end": "2026-12-21"
   },
-  "shop_count": 56,
+  "shop_count": 57,
   "sources": [
     {
       "name": "2026_05.pdf",

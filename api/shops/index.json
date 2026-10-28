@@ -559,6 +559,16 @@
       "location": "大学内指定場所",
       "google_map": "",
       "category": "キッチンカー"
+    },
+    {
+      "id": "NrSX7p",
+      "name": "媽媽菜館六花",
+      "url": "https://schedule.mellow.jp/ss_web/shops/NrSX7p",
+      "image_url": "",
+      "headline": "ユーリンチ丼（小、大）",
+      "location": "大学内指定場所",
+      "google_map": "",
+      "category": "キッチンカー"
     }
   ]
 }
